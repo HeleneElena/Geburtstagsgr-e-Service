@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Bad Script';
+    font-weight: 400;
+    src: url('../css/fonts/bad-script-v16-latin_cyrillic-regular.woff2') format('woff2'),
+         url('../css/fonts/bad-script-v16-latin_cyrillic-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    src: url('../css/fonts/open-sans-v29-latin_cyrillic-regular.woff2') format('woff2'),
+        url('../css/fonts/open-sans-v29-latin_cyrillic-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    src: url('../css/fonts/open-sans-v29-latin_cyrillic-700.woff2') format('woff2'),
+        url('../css/fonts/open-sans-v29-latin_cyrillic-700.woff') format('woff');
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans';
+    background: #FFF1F8;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 20px rgba(72, 3, 38, 0.07);
+    border-radius: 0px;
+    padding: 20px 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__btn-change {
+    width: 300px;
+    height: 65px;
+    left: calc(50% - 300px/2 - 480px);
+    background: #C300C7;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-right: 30px;
+}
+
+.header__btn-change: :last-child {
+    margin-right: 0;
+}
+
+.header__btn-gender {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+}
