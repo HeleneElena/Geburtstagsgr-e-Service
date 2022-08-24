@@ -122,8 +122,15 @@ ul {
 }
 
 .header__btn-gender_women {
-    /* border: 1px solid #C300C7; */
     background-image: url('../image/frauSvg.svg');
+}
+
+.men .header__btn-gender_men {
+    border: 1px solid #1178B2;
+}
+
+.women .header__btn-gender_women {
+    border: 1px solid #C300C7; 
 }
 
 .card {
@@ -152,9 +159,18 @@ ul {
     top: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.8;
-    font-family: 'Bad Script';
     font-style: italic;
     font-size: max(3em, min(calc(100vw * 3 / 140 ), 6em));
+    text-align: center;
+ }
+
+ .women .card__text {
+    font-family: 'Bad Script';
+ }
+
+ .men .card__text {
+     font-family: 'Open Sans';
+     font-weight: 700;
  }
 
  .footer__text {
@@ -182,6 +198,14 @@ ul {
  .footer__text {
     display: flex;
     flex-direction: column;
+ }
+
+ .footer__link {
+    transition: opacity 0.3s ease-in;
+ }
+
+ .footer__link:hover {
+    opacity: .5;
  }
 
  @media (max-width: 880px) {
