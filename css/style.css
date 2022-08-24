@@ -88,13 +88,17 @@ ul {
     width: 300px;
     height: 65px;
     left: calc(50% - 300px/2 - 480px);
-    background: #C300C7;
+    background: #5273C8;
     border-radius: 30px;
     border: none;
     font-weight: 700;
     font-size: 18px;
     color: #FFFFFF;
     margin-right: 30px;
+}
+
+.header__btn-change:hover {
+    background: #910394;
 }
 
 .header__btn-change:last-child {
@@ -129,8 +133,8 @@ ul {
     border: 1px solid #1178B2;
 }
 
-.women .header__btn-gender_women {
-    border: 1px solid #C300C7; 
+.men .header__btn-gender_men:hover {
+    border-color: #0f5f8d;
 }
 
 .card {

@@ -2,7 +2,10 @@ const btnMen = document.querySelector('.header__btn-gender_men'),
       btnWomen = document.querySelector('.header__btn-gender_women'),
       body = document.body,
       cardImg = document.querySelector('.card__image'),
-      cardText = document.querySelector('.card__text');
+      cardText = document.querySelector('.card__text'),
+      btnText = document.querySelector('.header__btn-change_text'),
+      btnImage = document.querySelector('.header__btn-change_image');
+
 
 // меняем фон с женского на мужской и обратно
 const state = {
@@ -17,12 +20,21 @@ const getRandomForArr = (arr) => {
 // функция для получения данных
 const getData = () => fetch('db.json').then((response) => response.json());
 
+const changeСongratulations = () => {
+    if (state.photo.includes('black')) {
+            cardText.style.color = 'white';
+        } else {
+            cardText.style.color = '';
+        }
+        cardImg.src = `image/${state.photo}`;
+        cardText.innerHTML = state.text.replaceAll('\n', '<br>');
+}
+
 const getDataToCard = () => {
      getData().then(data => {
         state.text = getRandomForArr(data.text[state.gender]);
         state.photo = getRandomForArr(data.photo[state.gender]);
-        cardImg.src = `image/${state.photo}`;
-        cardText.innerHTML = state.text.replaceAll('\n', '<br>');
+        changeСongratulations();
      });
 };
 
@@ -45,6 +57,24 @@ const changeToWomen = () => {
     }   
 };
 
+// по нажатию кнопки меняем текст
+const changeText = () => {
+    getData().then(data => {
+        state.text = getRandomForArr(data.text[state.gender]);
+        changeСongratulations();
+    });
+};
+
+// по нажатию кнопки меняем image
+const changeImage = () => {
+    getData().then(data => {
+        state.photo = getRandomForArr(data.photo[state.gender]);
+        changeСongratulations();
+    });
+};
+
 btnMen.addEventListener('click', changeToMen);
 btnWomen.addEventListener('click', changeToWomen);
+btnText.addEventListener('click', changeText);
+btnImage.addEventListener('click', changeImage);
 getDataToCard();
