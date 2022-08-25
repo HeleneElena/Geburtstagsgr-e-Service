@@ -134,6 +134,10 @@ ul {
     border: 1px solid #1178B2;
 }
 
+.women .header__btn-gender_women {
+    border: 1px solid #C300C7;
+}
+
 .men .header__btn-gender_men:hover {
     border-color: #0f5f8d;
 }
