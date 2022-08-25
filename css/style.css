@@ -98,7 +98,8 @@ ul {
 }
 
 .header__btn-change:hover {
-    background: #910394;
+    background: #FDD4D8;
+    color: #5273C8;
 }
 
 .header__btn-change:last-child {
@@ -177,6 +178,10 @@ ul {
      font-weight: 700;
  }
 
+ .download {
+    margin-top: 50px;
+ }
+
  .footer__text {
     margin-bottom: 17px;
     margin-top: 62px;
@@ -196,7 +201,6 @@ ul {
  .footer__sozial {
     display: flex;
     gap: 16px;
-    margin-top: 35px;
  }
 
  .footer__text {

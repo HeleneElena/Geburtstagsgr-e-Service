@@ -4,8 +4,9 @@ const btnMen = document.querySelector('.header__btn-gender_men'),
       cardImg = document.querySelector('.card__image'),
       cardText = document.querySelector('.card__text'),
       btnText = document.querySelector('.header__btn-change_text'),
-      btnImage = document.querySelector('.header__btn-change_image');
-
+      btnImage = document.querySelector('.header__btn-change_image'),
+      download = document.querySelector('.download'),
+      cardWrapper = document.querySelector('.card-wrapper');
 
 // меняем фон с женского на мужской и обратно
 const state = {
@@ -78,3 +79,18 @@ btnWomen.addEventListener('click', changeToWomen);
 btnText.addEventListener('click', changeText);
 btnImage.addEventListener('click', changeImage);
 getDataToCard();
+
+download.addEventListener('click', () => {
+    const newWindow = window.open(
+        '', 
+        '', 
+        `width=840,height=520,
+        top=${screen.height / 2 - 520 / 2},
+        left=${screen.width / 2 - 840 / 2}`);
+
+    html2canvas(cardWrapper).then((canvas) => {
+        canvas.style.maxWidth = '100%';
+        canvas.style.height = 'auto';
+        newWindow.document.body.append(canvas);
+    });
+});
